@@ -229,6 +229,7 @@ body {
 .text-block .additional-skills .skills-list div{
 	display: flex;
 	align-items: center;
+	
 }
 .text-block .additional-skills .skills-list div img{
 	width: 14px;
@@ -631,7 +632,9 @@ footer > p{
 	.education-block > div:last-child{
 		padding-top: 15px;
 	}
-
+	.education-block > div:last-child div{
+		margin-bottom: 5px;
+	}
 
 
 	/* skills phone */
@@ -639,7 +642,11 @@ footer > p{
 	height: auto;
 }
 .text-block .additional-skills div .skills-list{
-	gap: 16px;
+	gap: 0px;
+}
+.text-block .additional-skills .skills-list div{
+	margin-right: 10px;
+	margin-bottom: 5px;
 }
 .text-block ul li{
 	flex-direction: column;
@@ -707,9 +714,12 @@ footer > p{
 }
 
 /* contact phone */
+
+.contact-block-wrap{
+	margin-top: 50px;
+}
 .contact-block{
 	margin-top: 20px;
-
 }
 .contact-data-bottom a img{
 	border: solid 3px white;
