@@ -596,13 +596,13 @@ footer > p{
 	}
 
 	.contact-data-hero a img{
-		border: solid 2px white;
+		border: solid 3px white;
 		width: calc(var(--index) * 4.5);
 		margin-right: 0px;
 		margin-left: 10px;
 	}
 	.contact-data-hero  img:hover{
-		border: solid 2px white;
+		border: solid 3px white;
 	}
 
 
@@ -785,7 +785,7 @@ footer > p{
 	margin-top: 20px;
 }
 .contact-data-bottom a img{
-	width: calc(var(--index) * 6);
+	width: calc(var(--index) * 5);
 
 }
 
@@ -800,8 +800,7 @@ footer > p{
 .another-data-bottom > a > img{
 	margin-bottom: 8px;
 	margin-right: 0px;
-	width: calc(var(--index) * 6);
-
+	width: calc(var(--index) * 4.5);
 }
 .another-data-bottom > a:hover > img{
 	border: solid 3px white;
