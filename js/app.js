@@ -1,6 +1,14 @@
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
-if(ScrollTrigger.isTouch !== 1 &&  window.innerWidth > 1024){
+// const width = window.innerWidth;
+// console.log(width);
+// function updateSizeInfo() {
+//     width = window.innerWidth;
+// }
+
+// window.addEventListener('resize', updateSizeInfo);
+
+if(ScrollTrigger.isTouch !== 1){
         
 ScrollSmoother.create({
     wrapper: ".wrapper",
@@ -62,6 +70,8 @@ itemsR.forEach(item => {
 
 }
 
+
+
 if(document.querySelector("footer")){
     const today = new Date();
     const year = today.getFullYear();
@@ -73,6 +83,7 @@ if(document.querySelector(".modal-background")){
     const modalBkg = document.querySelector(".modal-background");
     const modal = document.querySelector(".modal-block");
     const body = document.querySelector("body");
+    const modalWidget = document.querySelector(".modal-info-widget"); 
     
     const openModalHnalder = (i) =>{ 
         body.style.overflowY = "hidden";
@@ -93,6 +104,7 @@ if(document.querySelector(".modal-background")){
         modal.querySelectorAll(".modal-links a")[0].innerHTML = projects[i].links.online;   
         modal.querySelectorAll(".modal-links a")[1].href = projects[i].links.github; 
         modal.querySelectorAll(".modal-links a")[1].innerHTML = projects[i].links.github; 
+
         modal.querySelectorAll(".modal-links a").forEach((a) => {
             console.log(a.innerHTML.length);
             if(a.innerHTML.length < 4){   
@@ -103,9 +115,6 @@ if(document.querySelector(".modal-background")){
                 a.style.textDecoration = 'underline';
             }
         })
-         
-        
-
     }
 
     document.querySelectorAll(".gallery .projects-block").forEach((p, i)=>{
@@ -115,12 +124,22 @@ if(document.querySelector(".modal-background")){
         p.addEventListener("click", () => openModalHnalder(i));
     });
     const closeModalHandler = () => {
+        modalBkg.removeEventListener("click", closeModalHandler);
         body.style.overflowY = "auto";
         modalBkg.classList.add("none");
-        modal.classList.add("none");
+        modal.classList.length === 1  && modal.classList.add("none");
+        modalWidget.classList.length === 1  && modalWidget.classList.add("none");
+        
     }
-    
+    document.querySelector(".modal-block > img").addEventListener("click", closeModalHandler);
 
-    
+    const openInfoHanlder = () => {
+        body.style.overflowY = "hidden";
+        modalBkg.classList.remove("none");
+        modalBkg.addEventListener("click", closeModalHandler);
+        modalWidget.classList.remove("none");
+    }
+    document.querySelector(".info-widget").addEventListener("click", openInfoHanlder);
+    document.querySelector(".modal-info-widget > div > img").addEventListener("click", closeModalHandler);
 }
 

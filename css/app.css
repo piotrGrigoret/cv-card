@@ -139,6 +139,10 @@ body {
 	-moz-box-shadow: -1px -4px 47px 3px rgba(232,229,232,1);
 	box-shadow: -1px -4px 47px 3px rgba(232,229,232,1);
 }
+.gallery-left > img:first-child{
+	margin-top: 50px;
+	margin-bottom: 180px;
+}
 .gallery__right {
 	margin: 0;
 	margin-top: var(--gallery-gap);
@@ -370,8 +374,14 @@ body {
 	-webkit-box-shadow: -1px -4px 47px 3px rgba(232,229,232,1);
 	-moz-box-shadow: -1px -4px 47px 3px rgba(232,229,232,1);
 	box-shadow: -1px -4px 47px 3px rgba(232,229,232,1);
-	padding: 30px;
-	
+	padding: 40px;
+}
+.modal-block > img{
+	width: 20px;
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	cursor: pointer;
 }
 .modal-content{
 	height: 100%;
@@ -497,9 +507,60 @@ footer > p{
 }
 
 
+.info-widget{
+	display: none;
+}
 
 
 @media screen and (max-width: 1024px) {
+
+	.info-widget{
+		display: block;
+		z-index: 1;
+		position: fixed;
+		right: 1vw;
+		bottom: 1vw;
+		width: 45px;
+		/* background-color: white; */
+	}
+	.info-widget > img{
+		width: 100%;
+		border: solid 2px white;
+		border-radius: 100%;
+		-webkit-box-shadow: -1px -4px 17px 3px rgba(232,229,232,1);
+		-moz-box-shadow: -1px -4px 17px 3px rgba(232,229,232,1);
+		box-shadow: -1px -4px 17px 3px rgba(232,229,232,1);
+	}
+	.modal-info-widget{
+		z-index: 4;
+		height: 50vh;
+		width: 60vw;
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		background-image: url(../img/bg.jpg);
+		background-size: 50px;
+		color: #fafafa;
+		border-radius: 10px;
+		-webkit-box-shadow: -1px -4px 17px 3px rgba(232,229,232,1);
+		-moz-box-shadow: -1px -4px 17px 3px rgba(232,229,232,1);
+		box-shadow: -1px -4px 17px 3px rgba(232,229,232,1);
+		padding: 30px;
+
+	}
+	.modal-info-widget > div{
+		display: flex;
+		text-align: center;
+		align-items: center;
+		height: 100%;
+	}
+	.modal-info-widget > div > img{
+		width: 20px;
+		position: absolute;
+		right: 10px;
+		top: 10px;
+	}
 	/* hero mobile */
 	.hero-section{
 		display: flex;
@@ -573,7 +634,7 @@ footer > p{
 	}
 	.gallery__item  > img{
 		width: calc(var(--index) * 28);
-		height: calc(var(--index) * 38);
+		/* height: calc(var(--index) * 38);	 */
 		object-fit:cover;
 		object-position:center;
 		margin: 0 auto;
@@ -724,8 +785,10 @@ footer > p{
 	margin-top: 20px;
 }
 .contact-data-bottom a img{
-	border: solid 3px white;
+	width: calc(var(--index) * 6);
+
 }
+
 .contact-data-bottom  img:hover{
 	border: solid 3px white;
 }
@@ -737,6 +800,7 @@ footer > p{
 .another-data-bottom > a > img{
 	margin-bottom: 8px;
 	margin-right: 0px;
+	width: calc(var(--index) * 6);
 
 }
 .another-data-bottom > a:hover > img{
