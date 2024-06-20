@@ -596,7 +596,7 @@ footer > p{
 	}
 	.experience > p{
 		font-size: calc(var(--index) * 1.2);
-		margin-bottom: 0px;
+		margin-bottom: 3.5px;
 	}
 	.experience > div > p{
 		white-space: wrap;
@@ -638,7 +638,9 @@ footer > p{
 .text-block .additional-skills{
 	height: auto;
 }
-
+.text-block .additional-skills div .skills-list{
+	gap: 16px;
+}
 .text-block ul li{
 	flex-direction: column;
 	justify-content: center;
