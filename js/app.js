@@ -1,66 +1,66 @@
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
-if(ScrollTrigger.isTouch !== 1){
+// if(ScrollTrigger.isTouch !== 1){
         
-ScrollSmoother.create({
-    wrapper: ".wrapper",
-    content: ".content",
-    smooth: 1.5,
-    effects: true,
+// ScrollSmoother.create({
+//     wrapper: ".wrapper",
+//     content: ".content",
+//     smooth: 1.5,
+//     effects: true,
 
-});
-
-
-gsap.fromTo(".hero-section", { opacity:1 }, {
-    opacity:0,
-    scrollTrigger:{
-        trigger: ".hero-section",
-        start: "center",
-        end:'720',
-        scrub:true,
-    }
-});
+// });
 
 
+// gsap.fromTo(".hero-section", { opacity:1 }, {
+//     opacity:0,
+//     scrollTrigger:{
+//         trigger: ".hero-section",
+//         start: "center",
+//         end:'720',
+//         scrub:true,
+//     }
+// });
 
-gsap.fromTo(".contact-data-hero", { opacity:0, display:"none" }, {
-    opacity:1,
-    display:"block",
-    scrollTrigger:{
-        trigger: ".hero-section",
-        start: "start",
-        end:'20',
-        scrub:true,
-    }
-});
 
-let itemsL = gsap.utils.toArray('.gallery-left .gallery__item')
-itemsL.forEach(item => {
-    gsap.fromTo(item, { opacity: 0, x: -60 }, {
-        opacity: 1, x: 10,
-        scrollTrigger: {
-            trigger: item,
-            start: '-850',
-            end: '-100',
-            scrub: true,
-        }
-    })
-});
 
-let itemsR = gsap.utils.toArray('.gallery-right .gallery__item')
-itemsR.forEach(item => {
-    gsap.fromTo(item, { opacity: 0, x: 30 }, {
-        opacity: 1, x: 10,
-        scrollTrigger: {
-            trigger: item,
-            start: '-850',
-            end: '-100',
-            scrub: true,
-        }
-    })
-});
+// gsap.fromTo(".contact-data-hero", { opacity:0, display:"none" }, {
+//     opacity:1,
+//     display:"block",
+//     scrollTrigger:{
+//         trigger: ".hero-section",
+//         start: "start",
+//         end:'20',
+//         scrub:true,
+//     }
+// });
 
-}
+// let itemsL = gsap.utils.toArray('.gallery-left .gallery__item')
+// itemsL.forEach(item => {
+//     gsap.fromTo(item, { opacity: 0, x: -60 }, {
+//         opacity: 1, x: 10,
+//         scrollTrigger: {
+//             trigger: item,
+//             start: '-850',
+//             end: '-100',
+//             scrub: true,
+//         }
+//     })
+// });
+
+// let itemsR = gsap.utils.toArray('.gallery-right .gallery__item')
+// itemsR.forEach(item => {
+//     gsap.fromTo(item, { opacity: 0, x: 30 }, {
+//         opacity: 1, x: 10,
+//         scrollTrigger: {
+//             trigger: item,
+//             start: '-850',
+//             end: '-100',
+//             scrub: true,
+//         }
+//     })
+// });
+
+// }
 
 if(document.querySelector("footer")){
     const today = new Date();
@@ -79,7 +79,6 @@ if(document.querySelector(".modal-background")){
         modalBkg.classList.remove("none");
         modal.classList.remove("none");
         modalBkg.addEventListener("click", closeModalHandler);
-
         modal.querySelector(".modal-content > h2").innerHTML = projects[i].title; 
         modal.querySelector(".modal-content > div").innerHTML = projects[i].img.map((img, index)=>(
             `
@@ -108,10 +107,13 @@ if(document.querySelector(".modal-background")){
         
 
     }
-    document.querySelectorAll(".projects-block").forEach((p, i)=>{
+
+    document.querySelectorAll(".gallery .projects-block").forEach((p, i)=>{
         p.addEventListener("click", () => openModalHnalder(i));
     });
-
+    document.querySelectorAll(".gallery-mobile .projects-block").forEach((p, i)=>{
+        p.addEventListener("click", () => openModalHnalder(i));
+    });
     const closeModalHandler = () => {
         body.style.overflowY = "auto";
         modalBkg.classList.add("none");
