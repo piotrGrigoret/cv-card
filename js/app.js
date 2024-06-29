@@ -1,74 +1,104 @@
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
-// const width = window.innerWidth;
-// console.log(width);
-// function updateSizeInfo() {
-//     width = window.innerWidth;
-// }
+let width = window.innerWidth;
+let smootherInstance;
+let triggers = [];
 
-// window.addEventListener('resize', updateSizeInfo);
+function initGSAP() {
+    smootherInstance = ScrollSmoother.create({
+        wrapper: ".wrapper",
+        content: ".content",
+        smooth: 1.5,
+        effects: true,
+    });
 
-if(ScrollTrigger.isTouch !== 1){
-        
-ScrollSmoother.create({
-    wrapper: ".wrapper",
-    content: ".content",
-    smooth: 1.5,
-    effects: true,
+    triggers.push(
+        gsap.fromTo(".hero-section", { opacity: 1 }, {
+            opacity: 0,
+            scrollTrigger: {
+                trigger: ".hero-section",
+                start: "center",
+                end: '720',
+                scrub: true,
+            }
+        })
+    );
 
-});
+    triggers.push(
+        gsap.fromTo(".contact-data-hero", { opacity: 0, display: "none" }, {
+            opacity: 1,
+            display: "block",
+            scrollTrigger: {
+                trigger: ".hero-section",
+                start: "start",
+                end: '20',
+                scrub: true,
+            }
+        })
+    );
 
+    let itemsL = gsap.utils.toArray('.gallery-left .gallery__item');
+    itemsL.forEach(item => {
+        triggers.push(
+            gsap.fromTo(item, { opacity: 0, x: -60 }, {
+                opacity: 1, x: 10,
+                scrollTrigger: {
+                    trigger: item,
+                    start: '-850',
+                    end: '-100',
+                    scrub: true,
+                }
+            })
+        );
+    });
 
-gsap.fromTo(".hero-section", { opacity:1 }, {
-    opacity:0,
-    scrollTrigger:{
-        trigger: ".hero-section",
-        start: "center",
-        end:'720',
-        scrub:true,
-    }
-});
-
-
-
-gsap.fromTo(".contact-data-hero", { opacity:0, display:"none" }, {
-    opacity:1,
-    display:"block",
-    scrollTrigger:{
-        trigger: ".hero-section",
-        start: "start",
-        end:'20',
-        scrub:true,
-    }
-});
-
-let itemsL = gsap.utils.toArray('.gallery-left .gallery__item')
-itemsL.forEach(item => {
-    gsap.fromTo(item, { opacity: 0, x: -60 }, {
-        opacity: 1, x: 10,
-        scrollTrigger: {
-            trigger: item,
-            start: '-850',
-            end: '-100',
-            scrub: true,
-        }
-    })
-});
-
-let itemsR = gsap.utils.toArray('.gallery-right .gallery__item')
-itemsR.forEach(item => {
-    gsap.fromTo(item, { opacity: 0, x: 30 }, {
-        opacity: 1, x: 10,
-        scrollTrigger: {
-            trigger: item,
-            start: '-850',
-            end: '-100',
-            scrub: true,
-        }
-    })
-});
-
+    let itemsR = gsap.utils.toArray('.gallery-right .gallery__item');
+    itemsR.forEach(item => {
+        triggers.push(
+            gsap.fromTo(item, { opacity: 0, x: 30 }, {
+                opacity: 1, x: 10,
+                scrollTrigger: {
+                    trigger: item,
+                    start: '-850',
+                    end: '-100',
+                    scrub: true,
+                }
+            })
+        );
+    });
 }
+
+function killGSAP() {
+    if (smootherInstance) {
+        smootherInstance.kill();
+        smootherInstance = null;
+    }
+
+    triggers.forEach(trigger => trigger.scrollTrigger.kill());
+    triggers = [];
+}
+
+function updateSizeInfo() {
+    width = window.innerWidth;
+
+    if (width < 1024) {
+        if (smootherInstance) {
+            killGSAP();
+            window.location.reload();
+        }
+    } else if (width >= 1024) {
+        if (!smootherInstance) {
+            initGSAP();
+        }
+    }
+}
+
+window.addEventListener('resize', updateSizeInfo);
+
+if (width >= 1024 && ScrollTrigger.isTouch !== 1) {
+    initGSAP();
+}
+
 
 
 
