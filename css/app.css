@@ -320,6 +320,7 @@ body {
 .projects-block:first-of-type > div:hover{	background-image: url("../img/gif/iLn.gif");}
 .projects-block:nth-of-type(2) > div:hover{	background-image: url("../img/gif/OmIs.gif");}
 .projects-block:nth-of-type(3) > div:hover{	background-image: url("../img/gif/2Vqs.gif");}
+.projects-block:nth-of-type(4) > div:hover{	background-image: url("../img/gif/neon.gif");}
 
 .projects-block > div > img {
 	width: 100%;

@@ -28,6 +28,29 @@ const projects = [
     },
     {
         id:1,
+        title:'ToDo',
+        img:[
+            "./img/toDo/toDo1.png",
+            "./img/toDo/toDo2.png",
+            
+        ],
+        descrip:[
+      
+            "I developed a ToDo application using React, TypeScript, and Redux as part of a test assignment. This project not only allowed me to demonstrate my skills but also served as an opportunity to experiment with new coding methodologies. By exploring modern patterns and best practices, I enhanced both the functionality and maintainability of the application while gaining valuable hands-on experience.",
+            "Despite its simplicity, the app is fully tested using Jest, ensuring reliability and code quality throughout.",
+            
+         
+         
+        ],
+        links: {
+            online:"https://todo2024.onrender.com",
+            github:"https://github.com/piotrGrigoret/toDo2024",
+        }
+
+    },
+
+    {
+        id:2,
         title:'News Portal',
         img:[
             "./img/news/news.png",
@@ -56,7 +79,7 @@ const projects = [
     },
 
     {
-        id:2,
+        id:3,
         title:'News Portal',
         img:[
             "./img/ed/emailEditor.png",
