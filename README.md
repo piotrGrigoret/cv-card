@@ -20,7 +20,7 @@ ___
 ### Description:
 
 <div style="display: flex; justify-content: space-around;">
-  <img src="./img/work/crowcode.png" width="46%">
-  <img src="./img/work/crowcode.png"  width="49.9%">
+  <img src="./img/cv-card/cv5.png" width="46%">
+  <img src="./img/cv-card/cv4.png"  width="49.9%">
 </div>
 
