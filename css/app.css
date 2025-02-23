@@ -317,7 +317,7 @@ body {
 	-moz-box-shadow: 0px -2px 35px -7px rgba(255,255,255,1);
 	box-shadow: 0px -2px 35px -7px rgba(255,255,255,1);
 }
-.projects-block:first-of-type > div:hover{	background-image: url("../img/gif/iLn.gif");}
+.projects-block:first-of-type > div:hover{	background-image: url("../img/gif/AqCa.gif");}
 .projects-block:nth-of-type(2) > div:hover{	background-image: url("../img/gif/OmIs.gif");}
 .projects-block:nth-of-type(3) > div:hover{	background-image: url("../img/gif/2Vqs.gif");}
 .projects-block:nth-of-type(4) > div:hover{	background-image: url("../img/gif/neon.gif");}
@@ -756,7 +756,8 @@ footer > p{
 	box-shadow: 0px -2px 5px 10px rgba(87,87,87,1);
 
 }
-.projects-block:first-of-type > div{	background-image: url("../img/gif/iLn.gif");}
+
+.projects-block:first-of-type > div{	background-image: url("../img/gif/AqCa.gif");}
 .projects-block:nth-of-type(2) > div{	background-image: url("../img/gif/OmIs.gif");}
 .projects-block:nth-of-type(3) > div{	background-image: url("../img/gif/2Vqs.gif");}
 .projects-block:nth-of-type(4) > div{	background-image: url("../img/gif/neon.gif");}

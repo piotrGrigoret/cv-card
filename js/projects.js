@@ -1,6 +1,36 @@
 const projects = [
+ 
+ 
     {
         id:0,
+        title:'Github Search',
+        img:[
+            "./img/github/github1.png",
+            "./img/github/github2.png",
+            "./img/github/github3.png",
+            "./img/github/github4.png",
+        ],
+        descrip:[
+      
+            "This React application allows users to search for GitHub repositories by username.",
+            "Repository Search: The user enters a GitHub username in the search bar.",
+            "GitHub API Request: The application sends a request to the GitHub API to retrieve the list of repositories.",
+            "Error Handling: If the user is not found or has no repositories, an appropriate message is displayed.",
+         
+         
+        ],
+        links: {
+            online:"https://githubsearch-orh8.onrender.com/",
+            github:"https://github.com/piotrGrigoret/githubSearch",
+        }
+
+    },
+ 
+ 
+ 
+    {
+        
+        id:1,
         title:'Chat"Pulsetalk"',
         img:[
             "./img/chat/chat1.png",
@@ -27,7 +57,7 @@ const projects = [
 
     },
     {
-        id:1,
+        id:2,
         title:'ToDo',
         img:[
             "./img/toDo/toDo1.png",
@@ -45,35 +75,6 @@ const projects = [
         links: {
             online:"https://todo2024.onrender.com",
             github:"https://github.com/piotrGrigoret/toDo2024",
-        }
-
-    },
-
-    {
-        id:2,
-        title:'News Portal',
-        img:[
-            "./img/news/news.png",
-            "./img/news/news2.png",
-            "./img/news/news3.png",
-            "./img/news/news4.png",
-            "./img/news/news5.png",
-            "./img/news/news6.png",
-        ],
-        descrip:[
-      
-            "This project allows you to view current news that is updated in real-time. It also offers some social network features where you can comment on the news and save them to your personal archive.",
-            "On the website, you can view current news and add them to both personal and public archives.",
-            "There is an option to comment on the news.",
-            "You can view both personal and public archives. You also have the ability to delete news from your personal archive.",
-            "User settings are available. You can change your nickname, password, photo, and more.",
-            "You can also view your profile and its statistics in this section.",
-         
-         
-        ],
-        links: {
-            online:"https://newsclient.onrender.com/",
-            github:"https://github.com/piotrGrigoret/newsProject",
         }
 
     },
