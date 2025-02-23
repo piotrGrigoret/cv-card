@@ -18,9 +18,11 @@ ___
 ___
 
 ### Description:
-
-<div style="display: flex; justify-content: space-around;">
-  <img src="./img/cv-card/cv5.png" width="46%">
-  <img src="./img/cv-card/cv4.png"  width="49.9%">
+<div style="display: flex; flex-direction: column; align-items: center;" align="center">
+  <img src="./img/cv-card/cv5.png" width="70%">
+  <img src="./img/cv-card/cv2.png" width="70%">
+  <img src="./img/cv-card/cv4.png" width="70%">
+  <img src="./img/cv-card/cv3.png" width="70%">
 </div>
+
 
