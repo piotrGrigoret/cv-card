@@ -1,8 +1,37 @@
 const projects = [
  
- 
     {
         id:0,
+        title:'Github Search',
+        img:[
+            "./img/times/times1.png",
+            "./img/times/times2.png",
+            "./img/times/times3.png",
+            "./img/times/times4.png",
+            "./img/times/times5.png",
+        ],
+        descrip:[
+      
+            "📌 This React application interacts with the NY Times API, providing users with access to the latest news.",
+            "📢 Fetching Latest News – the app retrieves the most up-to-date headlines from the NY Times API.",
+            "🗂️ Category Filtering – users can filter news based on specific categories (politics, economy, sports, etc.).",
+            "🎨 Modern Interface – styled using Tailwind CSS and Lucide React.",
+            "⚠️ Error Handling – displays appropriate messages if data is unavailable or an error occurs.",
+         
+            "🔄 Frontend + Serverless Backend – this is the frontend part of the application, with the backend implemented using Vercel serverless functions.",
+
+        ],
+        links: {
+            online:"https://nytimes-78rz.onrender.com/",
+            github:"https://github.com/piotrGrigoret",
+        }
+
+    },
+ 
+ 
+ 
+    {
+        id:1,
         title:'Github Search',
         img:[
             "./img/github/github1.png",
@@ -30,7 +59,7 @@ const projects = [
  
     {
         
-        id:1,
+        id:2,
         title:'Chat"Pulsetalk"',
         img:[
             "./img/chat/chat1.png",
@@ -57,7 +86,7 @@ const projects = [
 
     },
     {
-        id:2,
+        id:3,
         title:'ToDo',
         img:[
             "./img/toDo/toDo1.png",
@@ -79,25 +108,6 @@ const projects = [
 
     },
 
-    {
-        id:3,
-        title:'News Portal',
-        img:[
-            "./img/ed/emailEditor.png",
-     
-        ],
-        descrip:[
-      
-            "A mini project that allows you to edit your text.",
-          
-         
-         
-        ],
-        links: {
-            online:"❌",
-            github:"https://github.com/piotrGrigoret/email-editor",
-        }
-
-    }
+    
 
 ];
