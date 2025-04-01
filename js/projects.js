@@ -54,12 +54,39 @@ const projects = [
         }
 
     },
- 
+    {
+        id:2,
+        title:'Store',
+        img:[
+            "./img/store/image.png",
+            "./img/store/image1.png",
+            "./img/store/image2.png",
+            "./img/store/image3.png",
+            
+        ],
+        descrip:[
+      
+            "This React application interacts with the Fake Store API, providing users with a seamless shopping experience.",
+            "🔹 Main Features: 🛒 Add to Cart & Total Cost Calculation – users can add products to their cart, with automatic total price calculation.",
+            "🗂️ Category & Price Sorting – sort products by category or price (low to high, high to low).",
+            "🔎 Keyword Search – quickly find products by searching with keywords.",
+            "🎨 Responsive UI – built with Tailwind CSS, ensuring a smooth experience across all devices.",
+            "⚠️ Error Handling – displays appropriate messages when data is unavailable or an error occurs."
+            
+         
+         
+        ],
+        links: {
+            online:"https://store-q1pg.onrender.com/",
+            github:"https://github.com/piotrGrigoret/Store",
+        }
+
+    },
  
  
     {
         
-        id:2,
+        id:3,
         title:'Chat"Pulsetalk"',
         img:[
             "./img/chat/chat1.png",
@@ -85,28 +112,7 @@ const projects = [
         }
 
     },
-    {
-        id:3,
-        title:'ToDo',
-        img:[
-            "./img/toDo/toDo1.png",
-            "./img/toDo/toDo2.png",
-            
-        ],
-        descrip:[
-      
-            "I developed a ToDo application using React, TypeScript, and Redux as part of a test assignment. This project not only allowed me to demonstrate my skills but also served as an opportunity to experiment with new coding methodologies. By exploring modern patterns and best practices, I enhanced both the functionality and maintainability of the application while gaining valuable hands-on experience.",
-            "Despite its simplicity, the app is fully tested using Jest, ensuring reliability and code quality throughout.",
-            
-         
-         
-        ],
-        links: {
-            online:"https://todo2024.onrender.com",
-            github:"https://github.com/piotrGrigoret/toDo2024",
-        }
-
-    },
+    
 
     
 
