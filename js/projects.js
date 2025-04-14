@@ -27,11 +27,40 @@ const projects = [
         }
 
     },
- 
+  
+    {
+        
+        id:1,
+        title:'coinTrend',
+        img:[
+            "./img/coinTrend/ct1.png",
+            "./img/coinTrend/ct2.png",
+            "./img/coinTrend/ct3.png",
+            "./img/coinTrend/ct4.png",
+            "./img/coinTrend/ct5.png",
+        ],
+        descrip:[
+      
+            "This React application interacts with the Binance API, providing users with real-time cryptocurrency prices and portfolio management.",
+            "💰 Live Cryptocurrency Rates – the app fetches the latest prices for various cryptocurrencies from the Binance API.",
+            "📊 Interactive Price Charts – users can view price trends and historical data for selected cryptocurrencies.",
+            "📈 Portfolio Management – design and manage a hypothetical portfolio by adding different cryptocurrencies, tracking their performance, and viewing overall portfolio value.",
+            "⏱️ Real-Time Price Updates – view cryptocurrency prices in real-time as they update instantly through WebSocket connections.",
+            "There is a verification system that checks the accuracy of the data you enter.",
+         
+        ],
+        links: {
+            online:"https://cointrend.onrender.com/",
+            github:"https://github.com/piotrGrigoret/coinTrend",
+        }
+
+    },
+    
+
  
  
     {
-        id:1,
+        id:2,
         title:'Github Search',
         img:[
             "./img/github/github1.png",
@@ -55,7 +84,7 @@ const projects = [
 
     },
     {
-        id:2,
+        id:3,
         title:'Store',
         img:[
             "./img/store/image.png",
@@ -82,38 +111,5 @@ const projects = [
         }
 
     },
- 
- 
-    {
-        
-        id:3,
-        title:'Chat"Pulsetalk"',
-        img:[
-            "./img/chat/chat1.png",
-            "./img/chat/chat2.png",
-            "./img/chat/chat5.png",
-            "./img/chat/chat6.png",
-            "./img/chat/chat8.png",
-            "./img/chat/chat10.png",
-        ],
-        descrip:[
-      
-            "This project allows you to create chats and communicate with other users in real-time.",
-            "This panel allows you to edit chats if you have admin privileges.",
-            "Here you can change information about your profile: photo, nickname, password, status, and more.",
-            "You can also view data about other users.",
-            "The application provides the option to register, but if you prefer not to, you can still use the app with limited functionality.",
-            "There is a verification system that checks the accuracy of the data you enter.",
-         
-        ],
-        links: {
-            online:"https://chatapp-vn5z.onrender.com/",
-            github:"https://github.com/piotrGrigoret/chatProject",
-        }
-
-    },
-    
-
-    
 
 ];
