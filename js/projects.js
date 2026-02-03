@@ -22,7 +22,7 @@ const projects = [
 
         ],
         links: {
-            online:"https://nytimes-78rz.onrender.com/",
+            online:"",
             github:"https://github.com/piotrGrigoret",
         }
 
@@ -78,7 +78,7 @@ const projects = [
          
         ],
         links: {
-            online:"https://githubsearch-orh8.onrender.com/",
+            online:"",
             github:"https://github.com/piotrGrigoret/githubSearch",
         }
 
@@ -106,7 +106,7 @@ const projects = [
          
         ],
         links: {
-            online:"https://store-q1pg.onrender.com/",
+            online:"",
             github:"https://github.com/piotrGrigoret/Store",
         }
 
