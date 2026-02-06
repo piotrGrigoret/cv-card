@@ -112,7 +112,6 @@ body {
 
 .gallery {
 	display: flex;
-	padding: calc(var(--index) * 8) 0;
 }
 .gallery-mobile{
 	display: none;
@@ -322,6 +321,8 @@ body {
 .projects-block:nth-of-type(2) > div:hover{	background-image: url("../img/gif/OmIs.gif");}
 .projects-block:nth-of-type(3) > div:hover{	background-image: url("../img/gif/2Vqs.gif");}
 .projects-block:nth-of-type(4) > div:hover{	background-image: url("../img/gif/neon.gif");}
+.projects-block:nth-of-type(5) > div:hover{	background-image: url("../img/gif/gif5.gif");}
+.projects-block:nth-of-type(6) > div:hover{	background-image: url("../img/gif/gif6.gif");}
 
 .projects-block > div > img {
 	width: 100%;
@@ -411,7 +412,6 @@ body {
 	width: 90%;
 	height: auto;
 	margin: 0 auto;
-	max-height: 450px;
 	border-radius: 10px;
 	margin-bottom: 20px;	
 	background-size: cover; 
@@ -734,6 +734,9 @@ footer > p{
 	padding: 0px 0px 0px 0px;
 	margin-top: 0px;
 } 
+.gallery-scrollbar{
+	margin-bottom: 40px;
+}
 .projects-block{
 	display: flex;
 	flex-direction: column-reverse;
@@ -762,13 +765,15 @@ footer > p{
 .projects-block:nth-of-type(2) > div{	background-image: url("../img/gif/OmIs.gif");}
 .projects-block:nth-of-type(3) > div{	background-image: url("../img/gif/2Vqs.gif");}
 .projects-block:nth-of-type(4) > div{	background-image: url("../img/gif/neon.gif");}
+.projects-block:nth-of-type(5) > div{	background-image: url("../img/gif/gif5.gif");}
+.projects-block:nth-of-type(6) > div{	background-image: url("../img/gif/gif6.gif");}
 
 .projects-block > div > img {
 	height: 150px;
 	width: 250px;
 }
 .projects-block  > div > img {
-	opacity: 0.4;
+	opacity: 0.8;
 }
 
 .modal-block{
